@@ -42,3 +42,22 @@ SELECT * from addresses WHERE user_id = 40;
 id|user_id|street|city|state|zip
 43|40|6439 Zetta Hills|Willmouth|WY|15029
 44|40|54369 Wolff Forges|Lake Bryon|CA|31587
+
+5)Correct Virginie Mitchell’s address to “New York, NY, 10108”.
+The address has been adjusted.
+
+6)How much would it cost to buy one of each tool?
+SELECT sum(price) FROM items WHERE category = 'Tools';
+7383
+
+7)How many total items did we sell?
+SELECT sum(quantity) FROM orders;
+2125
+
+8)How much was spent on books?
+SELECT sum(price) FROM items WHERE category = 'Books';
+sum(price)
+22702
+
+9)Simulate buying an item by inserting a User for yourself and an Order for that User.
+
