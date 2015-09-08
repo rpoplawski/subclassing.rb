@@ -17,19 +17,33 @@ class Vehicle
   def number_of_tires
     4
   end
+
+#
+# WRITE YOUR CODE HERE.
+
+  def describe
+   "This is a #{@make} #{@model}"
+  end
 end
 
-# WRITE YOUR CODE HERE.
 class ElectricCar < Vehicle
-attr_reader :make, :model
-def describe
-   "This is a #{make} #{model}"
+  def number_of_gears
+    1
   end
 end
 
 class Motorcycle <  Vehicle
-attr_reader :make, :model
+  def number_of_tires
+    2
+  end
 end
+
+class TrikeMotorcycle < Motorcycle
+  def number_of_tires
+    3
+  end
+end
+
 
 class InheritanceChallenge < MiniTest::Test
 
@@ -54,19 +68,19 @@ class InheritanceChallenge < MiniTest::Test
   end
 
   def test_number_of_tires
-    skip
+
     assert_equal 4, ElectricCar.new("Nissan", "Leaf").number_of_tires
     assert_equal 2, Motorcycle.new("Honda", "CTX700N").number_of_tires
   end
 
   def test_number_of_gears
-    skip
+
     assert_equal 1, ElectricCar.new("Nissan", "Leaf").number_of_gears
     assert_equal 4, Motorcycle.new("Honda", "CTX700N").number_of_gears
   end
 
   def test_trike
-    skip
+
     assert TrikeMotorcycle
     assert_equal Vehicle, TrikeMotorcycle.superclass.superclass
     assert_equal 3, TrikeMotorcycle.new("Can-Am", "Spyder").number_of_tires
