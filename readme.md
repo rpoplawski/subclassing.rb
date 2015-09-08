@@ -44,7 +44,7 @@ id|user_id|street|city|state|zip
 44|40|54369 Wolff Forges|Lake Bryon|CA|31587
 
 5)Correct Virginie Mitchell’s address to “New York, NY, 10108”.
-The address has been adjusted.
+The addresses have been adjusted.
 
 6)How much would it cost to buy one of each tool?
 SELECT sum(price) FROM items WHERE category = 'Tools';
@@ -60,4 +60,5 @@ sum(price)
 22702
 
 9)Simulate buying an item by inserting a User for yourself and an Order for that User.
-
+I added a new user with a made-up address with id=55 and user_id= 51
+55|51|123 Abc Street|Austin|TX|78734
